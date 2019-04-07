@@ -236,7 +236,7 @@ Response:
     ```
 
 ### Video groups
-* Fetch all vide groups of site.
+* Fetch all video groups of site.
     > GET `/videogroups`  
     
     Response:
