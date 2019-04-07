@@ -6,14 +6,15 @@
 
 ## What it is
 
-Backpulse.io is an open source API Based / Headless CMS. Manage your site's content through Backpulse's interface and retrieve it with a secure API.
+Backpulse.io is an open source API Based / Headless CMS.  
+Manage your site's content through Backpulse's interface and retrieve it with a secure API.
 
 [@backpulse](https://github.com/backpulse) on GitHub.
 
 ## Features
 
 - Unlimited sites
-- Unlimited storage
+- Storage
 - API endpoint encrypted with a Cloudflare SSL certificate
 - Contribution
 - Easy to use
@@ -69,7 +70,10 @@ Exemple of a 404 (not found) error:
 }
 ```
 
-## About
+## Routes
+List of all available routes for the client api.
+
+### About
 Fetch about informations  
 > GET `/about`  
 
@@ -83,7 +87,7 @@ Response:
 }
 ```
 
-## Contact
+### Contact
 Fetch contact informations
 > GET `/contact`
 
@@ -97,7 +101,7 @@ Response:
 }
 ```
 
-## Articles
+### Articles
 * Fetch all articles of site. 
     > GET `/articles`  
 
@@ -121,5 +125,152 @@ Response:
         "code": 200,
         "message": "success",
         "payload": Article
+    }
+    ```
+
+### Galleries
+* Fetch all galleries of site.
+    > GET `/galleries`  
+    
+    Response:
+    ```json
+    {
+        "status": "success",
+        "code": 200,
+        "message": "success",
+        "payload": []Gallery
+    }
+    ```
+
+* Fetch specific gallery.
+    > GET `/gallery/:shortid`
+
+    Response:
+    ```json
+    {
+        "status": "success",
+        "code": 200,
+        "message": "success",
+        "payload": Gallery
+    }
+    ```
+
+* Fetch default gallery.
+    > GET `/galleries/default`
+
+    Response:
+    ```json
+    {
+        "status": "success",
+        "code": 200,
+        "message": "success",
+        "payload": DefaultGallery
+    }
+    ```
+
+### Projects
+* Fetch all projects of site.
+    > GET `/projects`  
+    
+    Response:
+    ```json
+    {
+        "status": "success",
+        "code": 200,
+        "message": "success",
+        "payload": []Project
+    }
+    ```
+
+* Fetch specific project.
+    > GET `/projects/:shortid`
+
+    Response:
+    ```json
+    {
+        "status": "success",
+        "code": 200,
+        "message": "success",
+        "payload": Project
+    }
+    ```
+
+### Albums
+* Fetch all albums of site.
+    > GET `/albums`  
+    
+    Response:
+    ```json
+    {
+        "status": "success",
+        "code": 200,
+        "message": "success",
+        "payload": []Album
+    }
+    ```
+
+* Fetch specific album.
+    > GET `/albums/:shortid`
+
+    Response:
+    ```json
+    {
+        "status": "success",
+        "code": 200,
+        "message": "success",
+        "payload": Album
+    }
+    ```
+
+* Fetch specific track.
+    > GET `/tracks/:shortid`
+
+    Response:
+    ```json
+    {
+        "status": "success",
+        "code": 200,
+        "message": "success",
+        "payload": Track
+    }
+    ```
+
+### Video groups
+* Fetch all vide groups of site.
+    > GET `/videogroups`  
+    
+    Response:
+    ```json
+    {
+        "status": "success",
+        "code": 200,
+        "message": "success",
+        "payload": []VideoGroup
+    }
+    ```
+
+* Fetch specific video group.
+    > GET `/videogroups/:shortid`
+
+    Response:
+    ```json
+    {
+        "status": "success",
+        "code": 200,
+        "message": "success",
+        "payload": VideoGroup
+    }
+    ```
+
+* Fetch specific video.
+    > GET `/videos/:shortid`
+
+    Response:
+    ```json
+    {
+        "status": "success",
+        "code": 200,
+        "message": "success",
+        "payload": Video
     }
     ```
